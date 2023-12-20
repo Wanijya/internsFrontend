@@ -29,6 +29,8 @@ const StudentLayout = ({ children }) => {
           <>
             <Link href="/student/auth/profile">profile</Link>
             <br />
+            <Link href="/student/auth/applied">My Applications</Link>
+            <br />
             <Link onClick={SignoutHandler} href="">
               Signout
             </Link>

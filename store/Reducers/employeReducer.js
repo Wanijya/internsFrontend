@@ -1,19 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  student: null,
+  employe: null,
   jobs: null,
   internships: null,
   errors: [],
   isAuthenticated: false,
 };
 
-export const studentReducer = createSlice({
-  name: "student",
+export const employeReducer = createSlice({
+  name: "employe",
   initialState,
   reducers: {
-    addstudent: (state, action) => {
-      state.student = action.payload;
+    addemploye: (state, action) => {
+      state.employe = action.payload;
       state.isAuthenticated = true;
     },
     addjobs: (state, action) => {
@@ -22,25 +22,26 @@ export const studentReducer = createSlice({
     addinternships: (state, action) => {
       state.internships = action.payload;
     },
-    removestudent: (state, action) => {
-      state.student = null;
+    removeemploye: (state, action) => {
+      state.employe = null;
       state.isAuthenticated = false;
     },
     iserror: (state, action) => {
-      state.errors = [...state.errors, action.payload];
+      state.errors.push(action.payload);
     },
     removeerror: (state, action) => {
       state.errors = [];
     },
   },
 });
+
 export const {
-  addstudent,
+  addemploye,
   addjobs,
   addinternships,
-  removestudent,
+  removeemploye,
   iserror,
   removeerror,
-} = studentReducer.actions;
+} = employeReducer.actions;
 
-export default studentReducer.reducer;
+export default employeReducer.reducer;

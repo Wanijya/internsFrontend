@@ -21,6 +21,7 @@ const page = () => {
     };
     dispatch(asyncsigninstudent(student));
   };
+
   return (
     <div className="container d-flex gap-3 flex-column mt-5 ">
       <h3>SigIn</h3>
@@ -56,7 +57,9 @@ const page = () => {
           Signin
         </button>
       </form>
-      <Link className="" href="/student/forget">Forget Password ?</Link>
+      <Link className="" href="/student/forget">
+        Forget Password ?
+      </Link>
     </div>
   );
 };
