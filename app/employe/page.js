@@ -25,10 +25,10 @@ const page = () => {
   ];
 
   const router = useRouter();
-  const { isAuthenticated } = useSelector((state) => state.studentReducer);
+  const { isAuthenticated } = useSelector((state) => state.employeReducer);
   useEffect(() => {
     if (isAuthenticated) {
-      router.push("/student/auth");
+      router.push("/employe/auth");
     }
   }, [isAuthenticated]);
 
@@ -71,11 +71,11 @@ const page = () => {
         <h3> Empower your career with Internshala today</h3>
 
         <form className="d-flex gap-2 " role="search">
-          <Link href="/student" className="btn btn-light">
+          <Link href="/employe" className="btn btn-light">
             Student
           </Link>
 
-          <Link href="/student" className="btn btn-light">
+          <Link href="/employe" className="btn btn-light">
             Employer
           </Link>
         </form>

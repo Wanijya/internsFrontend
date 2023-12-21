@@ -3,6 +3,8 @@ import {
   asynccurrentstudent,
   asyncsignoutstudent,
 } from "@/store/Actions/studentActions";
+import NavigationforStudent from "@/components/NavigationforStudent";
+import Footer from "@/components/Footer";
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
@@ -21,29 +23,11 @@ const StudentLayout = ({ children }) => {
     dispatch(asyncsignoutstudent());
   };
   return (
-    <>
-      <nav className="container mt-5">
-        <Link href={isAuthenticated ? "/student/auth" : "/student"}>Home</Link>{" "}
-        <br />
-        {isAuthenticated ? (
-          <>
-            <Link href="/student/auth/profile">profile</Link>
-            <br />
-            <Link href="/student/auth/applied">My Applications</Link>
-            <br />
-            <Link onClick={SignoutHandler} href="">
-              Signout
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link href="/student/signup">Signup</Link> <br />
-            <Link href="/student/signin">Signin</Link>
-          </>
-        )}
-      </nav>
+    <div>
+      <NavigationforStudent />
       {children}
-    </>
+      {/* <Footer></Footer> */}
+    </div>
   );
 };
 

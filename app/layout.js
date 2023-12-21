@@ -1,4 +1,6 @@
 import Wrapper from "@/components/wrapper/Wrapper";
+import "./globals.css";
+import "./globalsSwiper.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const metadata = {
