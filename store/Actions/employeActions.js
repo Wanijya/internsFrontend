@@ -6,6 +6,7 @@ import {
   removeemploye,
   iserror,
 } from "../Reducers/employeReducer";
+import { toast } from "react-toastify";
 
 export const asynccurrentemploye = () => async (dispatch, getState) => {
   try {
@@ -114,6 +115,45 @@ export const asynccreateinternshipemploye =
       );
       dispatch(asynccurrentemploye());
     } catch (error) {
+      dispatch(iserror(error.response.data.message));
+    }
+  };
+
+export const asyncCreateNewInternship =
+  (internship) => async (dispatch, getstate) => {
+    try {
+      const { data } = await axios.post(
+        "/employe/internship/create",
+        internship
+      );
+      toast.success(data.msg);
+      dispatch(asynccurrentemploye());
+    } catch (error) {
+      toast.error(error.response.data.message);
+      dispatch(iserror(error.response.data.message));
+    }
+  };
+
+export const asyncCreateNewJob = (internship) => async (dispatch, getstate) => {
+  try {
+    const { data } = await axios.post("/employe/job/create", internship);
+    toast.success(data.msg);
+    dispatch(asynccurrentemploye());
+  } catch (error) {
+    toast.error(error.response.data.message);
+    dispatch(iserror(error.response.data.message));
+  }
+};
+
+export const asyncReadAllInternship =
+  (internship) => async (dispatch, getstate) => {
+    try {
+      const { data } = await axios.get("/internship/read", internship);
+      toast.success(data.msg);
+      dispatch(asynccurrentemploye());
+      return data;
+    } catch (error) {
+      toast.error(error.response.data.message);
       dispatch(iserror(error.response.data.message));
     }
   };

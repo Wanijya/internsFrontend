@@ -14,7 +14,7 @@ const employeAuthPage = () => {
 
   return (
     <div className="container mt-5">
-      <h2 className="mb-1">
+      <h2 className="mb-1 text-center">
         {employe &&
           "Hello, " +
             employe.firstname[0].toUpperCase() +

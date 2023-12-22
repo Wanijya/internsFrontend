@@ -23,7 +23,7 @@ const page = () => {
 
   return (
     <div className="container mt-5">
-      <h2 className="mb-1">
+      <h2 className="mb-1 ml-5">
         {student && "Hello, " + student.firstname + "! 👌"}
       </h2>
       <h3 className="mt-3 mb-5">

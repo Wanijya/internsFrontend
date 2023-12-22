@@ -60,7 +60,7 @@ const page = () => {
         className="mt-5 p-3"
         style={{ backgroundImage: 'url("footer_bg_1920.webp")' }}
       >
-        <h3> Empower your career with Internshala today</h3>
+        <h3> Empower your career with Jobs4You today</h3>
 
         <form className="d-flex gap-2 " role="search">
           <Link href="/student" className="btn btn-light">

@@ -39,7 +39,7 @@ const page = () => {
           <h1 className="m-2">Make your dream career a reality </h1>
           <span id="underline"></span>
         </div>
-        <h3 className="m-2 mb-5">Trending on Internshala</h3>
+        <h3 className="m-2 mb-5">Trending on Jobs4You</h3>
         <Swiper
           slidesPerView={3}
           centeredSlides={false}
@@ -68,7 +68,7 @@ const page = () => {
         className="mt-5 p-4"
         style={{ backgroundImage: 'url("footer_bg_1920.webp")' }}
       >
-        <h3> Empower your career with Internshala today</h3>
+        <h3> Empower your career with Jobs4You today</h3>
 
         <form className="d-flex gap-2 " role="search">
           <Link href="/employe" className="btn btn-light">
